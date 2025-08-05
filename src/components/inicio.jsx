@@ -1,8 +1,8 @@
 // src/components/Inicio.jsx
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
-// Pequeño componente para los íconos de la metodología
 const MetodologiaIcono = ({ icono, titulo, texto }) => (
     <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center transform transition-transform duration-300 hover:-translate-y-2">
         <div className="text-blue-400 text-5xl mb-4">{icono}</div>
@@ -13,13 +13,24 @@ const MetodologiaIcono = ({ icono, titulo, texto }) => (
 
 export default function Inicio({ setActiveSection }) {
   return (
-    <>
-      {/* SECCIÓN HERO (BIENVENIDA) */}
-      <section className="h-screen flex flex-col justify-center items-center text-center bg-gray-900 px-6">
-        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* SECCIÓN HERO (BIENVENIDA) CON IMAGEN DE FONDO */}
+      <section 
+        className="h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center"
+        style={{
+          // Coloca tu imagen en la carpeta 'public' y cambia el nombre del archivo aquí
+          backgroundImage: `linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('/servicio-tecnico.jpg')`
+        }}
+      >
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down text-white">
           Soluciones Tecnológicas a tu Alcance
         </h1>
-        <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto animate-fade-in-up">
+        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-up">
           Reparación, mantenimiento y diseño web. Confianza, rapidez y los mejores precios para potenciar tu mundo digital.
         </p>
         <button 
@@ -28,7 +39,7 @@ export default function Inicio({ setActiveSection }) {
           Contáctanos Ahora
         </button>
         <div className="absolute bottom-10 animate-bounce">
-            <svg className="w-8 h-8 text-gray-500" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-8 h-8 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
         </div>
@@ -132,6 +143,6 @@ export default function Inicio({ setActiveSection }) {
             </div>
         </div>
       </section>
-    </>
+    </motion.div>
   );
 }
