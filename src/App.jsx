@@ -1,11 +1,11 @@
 // src/App.jsx
 
 import React, { useState } from 'react';
-import Header from './components/header';
-import Inicio from './components/inicio';
+import Header from './components/Header';
+import Inicio from './components/Inicio';
 import Servicios from './components/servicios';
-import Contacto from './components/contacto';
-import Footer from './components/footer';
+import Contacto from './components/Contacto';
+import Footer from './components/Footer';
 
 // Importamos la instancia 'db' desde nuestra configuración
 import { db } from './firebaseConfig';
@@ -36,3 +36,4 @@ export default function App() {
     </div>
   );
 }
+
