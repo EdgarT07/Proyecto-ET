@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import ScrollAnimatedSection from './ScrollAnimatedSection'; // Importamos el nuevo componente
+import ScrollAnimatedSection from './ScrollAnimatedSection';
 
 const MetodologiaIcono = ({ icono, titulo, texto }) => (
     <div className="bg-gray-800 p-6 rounded-lg border border-gray-700 text-center transform transition-transform duration-300 hover:-translate-y-2">
@@ -30,7 +30,6 @@ export default function Inicio({ setActiveSection }) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* SECCIÓN HERO (BIENVENIDA) - Esta no usa la animación de scroll */}
       <section 
         className="h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center"
         style={{
@@ -55,7 +54,6 @@ export default function Inicio({ setActiveSection }) {
         </div>
       </section>
 
-      {/* A partir de aquí, todas las secciones usan la animación de scroll */}
       <ScrollAnimatedSection>
         <section id="quienes-somos" className="py-16 sm:py-20 bg-gray-800/50">
           <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">

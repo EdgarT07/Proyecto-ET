@@ -1,2 +1,5 @@
 node_modules/
 *.local
+
+# local env files
+.env.local

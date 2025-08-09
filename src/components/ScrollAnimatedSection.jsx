@@ -5,8 +5,6 @@ import { motion, useInView, useAnimation } from 'framer-motion';
 
 export default function ScrollAnimatedSection({ children }) {
     const ref = useRef(null);
-    // El 'margin' asegura que la animación se dispare un poco antes de que la sección esté completamente a la vista
-    // 'once: true' hace que la animación solo ocurra una vez
     const isInView = useInView(ref, { once: true, margin: "-100px" });
     const mainControls = useAnimation();
 

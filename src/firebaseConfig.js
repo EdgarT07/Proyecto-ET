@@ -4,22 +4,20 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, signInAnonymously } from "firebase/auth";
 
-// --- PEGA AQUÍ TU CONFIGURACIÓN DE FIREBASE ---
+// Lee las variables de entorno de forma segura
 const firebaseConfig = {
-  apiKey: "AIzaSyAZhIOeOLOnqvQqcSsUWuCzXs8EdgyeaDI",
-  authDomain: "tech-solution-website.firebaseapp.com",
-  projectId: "tech-solution-website",
-  storageBucket: "tech-solution-website.firebasestorage.app",
-  messagingSenderId: "306251797244",
-  appId: "1:306251797244:web:2d22e9f3918d7e76e23d79",
-  measurementId: "G-5G7L7B3X4P"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
-
 
 // Iniciar sesión anónimamente
 signInAnonymously(auth).catch((error) => {
