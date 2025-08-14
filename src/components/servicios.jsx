@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { services } from '../data/servicesData';
 
 export default function Servicios({ setActiveSection }) {
@@ -14,6 +15,10 @@ export default function Servicios({ setActiveSection }) {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.5 }}
     >
+      <Helmet>
+        <title>Nuestros Servicios - Tech Solution</title>
+        <meta name="description" content="Explora nuestros servicios: reparación de laptops y PC, mantenimiento, eliminación de virus, recuperación de datos, soporte remoto y diseño web." />
+      </Helmet>
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">Nuestros Servicios</h2>

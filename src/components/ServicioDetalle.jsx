@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import ScrollAnimatedSection from './ScrollAnimatedSection'; // Importamos el componente
+import { Helmet } from 'react-helmet-async';
+import ScrollAnimatedSection from './ScrollAnimatedSection';
 
 export default function ServicioDetalle({ service, setActiveSection }) {
   // REEMPLAZA ESTOS VALORES CON LOS TUYOS
@@ -16,6 +17,10 @@ export default function ServicioDetalle({ service, setActiveSection }) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <Helmet>
+        <title>{`${service.title} - Tech Solution`}</title>
+        <meta name="description" content={service.mainDescription.substring(0, 160)} />
+      </Helmet>
       {/* Hero Section - Sin animación de scroll */}
       <section 
         className="h-80 bg-cover bg-center flex items-center justify-center text-white px-4"

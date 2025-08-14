@@ -1,7 +1,8 @@
-// src/components/Inicio.jsx
+// src/components/inicio.jsx
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import ScrollAnimatedSection from './ScrollAnimatedSection';
 
 const MetodologiaIcono = ({ icono, titulo, texto }) => (
@@ -22,6 +23,18 @@ const VentajaIcono = ({ icono, titulo, texto }) => (
     </div>
 );
 
+const marcas = [
+  { nombre: 'Dell', logo: '/Dell.png' },
+  { nombre: 'HP', logo: '/HP.png' },
+  { nombre: 'Lenovo', logo: '/Lenovo.png' },
+  { nombre: 'Samsung', logo: '/Samsung.png' },
+  { nombre: 'Asus', logo: '/Asus.png' },
+  { nombre: 'Gateway', logo: '/Gateway.png' },
+  { nombre: 'Huawei', logo: '/Huawei.png' },
+  { nombre: 'ChromeBook', logo: '/Chromebook.png' }
+];
+const marcasDuplicadas = [...marcas, ...marcas];
+
 export default function Inicio({ setActiveSection }) {
   return (
     <motion.div
@@ -30,6 +43,43 @@ export default function Inicio({ setActiveSection }) {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
+      <Helmet>
+        <title>Tech Solution - Soluciones Tecnológicas a tu Alcance</title>
+        <meta name="description" content="Servicios profesionales de reparación de computadoras, mantenimiento preventivo y diseño web en Caracas. ¡Contáctanos para un diagnóstico gratuito!" />
+      </Helmet>
+      <style>
+        {`
+          .scroller {
+            max-width: 90%;
+            margin: auto;
+          }
+
+          .scroller__inner {
+            padding-block: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+          }
+
+          .scroller[data-animated="true"] {
+            overflow: hidden;
+            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+          }
+
+          .scroller[data-animated="true"] .scroller__inner {
+            width: max-content;
+            flex-wrap: nowrap;
+            animation: scroll 40s linear infinite;
+          }
+
+          @keyframes scroll {
+            to {
+              transform: translate(calc(-50% - 1rem));
+            }
+          }
+        `}
+      </style>
       <section 
         className="h-screen flex flex-col justify-center items-center text-center px-6 bg-cover bg-center"
         style={{
@@ -105,15 +155,14 @@ export default function Inicio({ setActiveSection }) {
         <section id="marcas" className="py-16 sm:py-20 bg-gray-800/50">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-12">Marcas con las que Trabajamos</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-60">
-              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Dell</p></div>
-              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">HP</p></div>
-              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Lenovo</p></div>
-              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Samsung</p></div>
-              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Asus</p></div>
-              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Gateway</p></div>
-              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Huawei</p></div>
-              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">ChromeBook</p></div>
+            <div className="scroller" data-animated="true">
+              <div className="scroller__inner">
+                {marcasDuplicadas.map((marca, index) => (
+                  <div key={index} className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center w-48 flex-shrink-0">
+                    <img src={marca.logo} alt={marca.nombre} className="max-h-22 w-auto" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

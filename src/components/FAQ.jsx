@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { faqs } from '../data/faqData';
 
 const AccordionItem = ({ faq }) => {
@@ -37,6 +38,10 @@ export default function FAQ() {
       transition={{ duration: 0.5 }}
       className="container mx-auto px-6 py-24 sm:py-32"
     >
+      <Helmet>
+        <title>Preguntas Frecuentes - Tech Solution</title>
+        <meta name="description" content="Encuentra respuestas a las dudas más comunes sobre nuestros servicios, garantías, métodos de pago y tiempos de diagnóstico." />
+      </Helmet>
       <div className="text-center mb-12">
         <h1 className="text-4xl sm:text-5xl font-extrabold">Preguntas Frecuentes</h1>
         <p className="text-gray-400 mt-4">Aquí encontrarás respuestas a las dudas más comunes.</p>

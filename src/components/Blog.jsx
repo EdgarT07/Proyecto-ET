@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { blogPosts } from '../data/blogData';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -18,6 +19,10 @@ export default function Blog({ setActiveSection }) {
       transition={{ duration: 0.5 }}
       className="container mx-auto px-6 py-24 sm:py-32"
     >
+      <Helmet>
+        <title>Blog de Tecnología - Tech Solution</title>
+        <meta name="description" content="Consejos, noticias y trucos del mundo de la tecnología. Aprende a optimizar tu PC, protegerte de virus y mucho más." />
+      </Helmet>
       <div className="text-center mb-12">
         <h1 className="text-4xl sm:text-5xl font-extrabold">Nuestro Blog</h1>
         <p className="text-gray-400 mt-4">Consejos, noticias y trucos del mundo de la tecnología.</p>

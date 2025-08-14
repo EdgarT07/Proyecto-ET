@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { collection, addDoc } from 'firebase/firestore';
 
 export default function Contacto({ db }) {
@@ -47,6 +48,10 @@ export default function Contacto({ db }) {
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.5 }}
     >
+      <Helmet>
+        <title>Contacto - Tech Solution</title>
+        <meta name="description" content="¿Tienes alguna pregunta o necesitas un servicio? Envíanos un mensaje a través de nuestro formulario o contáctanos directamente por WhatsApp o teléfono." />
+      </Helmet>
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-extrabold">Contáctanos</h1>
