@@ -58,12 +58,12 @@ export default function Inicio({ setActiveSection }) {
         <section id="quienes-somos" className="py-16 sm:py-20 bg-gray-800/50">
           <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Nuestra Historia</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Quienes Somos</h2>
               <p className="text-gray-300 mb-4">
-                Somos un equipo de profesionales apasionados por la tecnología, dedicados a ofrecer soluciones eficientes y confiables. Lo que comenzó como un pequeño taller enfocado en reparaciones locales, ha crecido gracias a la confianza de nuestros clientes hasta convertirse en un centro de soluciones tecnológicas integrales.
+                Somos un equipo de profesionales apasionados por la tecnología, dedicados a ofrecer soluciones eficientes y confiables. Queremos ganarnos tu confianza, brindándote un servicio de calidad y atención personalizada ofreciéndote soluciones tecnológicas de integridad.
               </p>
               <p className="text-gray-300 mb-4">
-                Con años de experiencia en el sector, entendemos las necesidades de nuestros clientes y nos esforzamos por superar sus expectativas en cada proyecto. Creemos en un servicio honesto, transparente y personalizado, porque más que clientes, buscamos construir relaciones a largo plazo.
+                Entendemos las necesidades de nuestros clientes y nos esforzamos por superar sus expectativas en cada proyecto. Creemos en un servicio honesto, transparente y personalizado, porque más que clientes, buscamos construir relaciones a largo plazo.
               </p>
               <p className="text-gray-400">
                 Desde la reparación más compleja hasta el diseño de una página web impactante, nuestro compromiso es con la calidad y tu satisfacción.
@@ -106,12 +106,14 @@ export default function Inicio({ setActiveSection }) {
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-12">Marcas con las que Trabajamos</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-60">
-              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Apple</p></div>
               <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Dell</p></div>
               <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">HP</p></div>
               <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Lenovo</p></div>
               <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Samsung</p></div>
               <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Asus</p></div>
+              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Gateway</p></div>
+              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">Huawei</p></div>
+              <div className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center"><p className="text-gray-400 text-lg">ChromeBook</p></div>
             </div>
           </div>
         </section>

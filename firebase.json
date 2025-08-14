@@ -1,10 +1,4 @@
 {
-  "functions": {
-    "source": "functions",
-    "predeploy": [
-      "echo 'Omitiendo la revisión de código para un despliegue rápido.'"
-    ]
-  },
   "hosting": {
     "public": "dist",
     "ignore": [
