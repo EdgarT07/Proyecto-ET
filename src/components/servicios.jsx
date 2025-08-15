@@ -28,7 +28,7 @@ export default function Servicios({ setActiveSection }) {
           {services.map((service) => (
             <div 
               key={service.id} 
-              className="bg-gray-800 p-8 rounded-lg border border-gray-700 flex flex-col"
+              className="bg-gray-800 p-8 rounded-lg flex flex-col"
             >
               <div className="text-4xl mb-4">{service.icon}</div>
               <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>

@@ -54,15 +54,14 @@ export default function ServicioDetalle({ service, setActiveSection }) {
 
         <ScrollAnimatedSection>
           <section className="mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-blue-400">Galería de Proyectos</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-blue-400">Galería</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {service.gallery.map((image, index) => (
-                      <div key={index} className="bg-gray-700/50 rounded-lg flex items-center justify-center h-64 border-2 border-dashed border-gray-500">
+                      <div key={index} className="bg-gray-700/50 rounded-lg flex items-center justify-center h-64">
                           <img src={image} alt={`Galería ${index + 1}`} className="w-full h-full object-cover rounded-lg"/>
                       </div>
                   ))}
               </div>
-               <p className="text-center text-gray-500 mt-4">Aquí puedes integrar un carrusel de imágenes.</p>
           </section>
         </ScrollAnimatedSection>
 

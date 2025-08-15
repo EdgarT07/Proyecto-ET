@@ -6,7 +6,7 @@ export const services = [
         icon: '💻', 
         title: 'Reparación de Laptops y PC', 
         shortDescription: 'Diagnóstico y solución completa para fallas de hardware y software.',
-        heroImage: 'https://placehold.co/1200x400/111827/4F8AFE?text=Reparacion+de+PC', // Reemplaza con tu imagen
+        heroImage: 'https://serviciotecnicoencomputacion.com/images/Mantenimiento-Preventivo-Correctivo.webp', // Reemplaza con tu imagen
         mainDescription: "Nuestro servicio de reparación de computadoras aborda desde los problemas más comunes hasta las fallas más complejas. Entendemos lo crucial que es tu equipo para tu trabajo y vida diaria, por lo que ofrecemos un diagnóstico rápido y soluciones efectivas para que vuelvas a estar en línea lo antes posible. Utilizamos piezas de alta calidad y las últimas herramientas para garantizar una reparación duradera y confiable.",
         features: [
             'Reemplazo de pantallas, teclados y baterías.',
@@ -15,9 +15,9 @@ export const services = [
             'Instalación y configuración de Windows, macOS y Linux.'
         ],
         gallery: [ // Reemplaza con tus imágenes
-            'https://placehold.co/600x400/1f2937/ffffff?text=Imagen+1',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Imagen+2',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Carrusel',
+            'https://facialix.com/wp-content/uploads/2024/05/formacion-en-reparacion-de-laptops.jpg',
+            'https://intratecno.com/wp-content/uploads/servicio-tecnico-reparacion-de-computadoras-notebooks-mac-armado-de-pc-intratecno.webp',
+            'https://larepublica.cronosmedia.glr.pe/original/2022/02/12/62081478655ab87daf1fce77.jpg',
         ]
     },
     { 
@@ -25,7 +25,7 @@ export const services = [
         icon: '⚙️', 
         title: 'Mantenimiento Preventivo', 
         shortDescription: 'Optimiza y alarga la vida útil de tus equipos con nuestro servicio completo.',
-        heroImage: 'https://placehold.co/1200x400/111827/4F8AFE?text=Mantenimiento',
+        heroImage: 'https://www.computronixco.com/wp-content/uploads/2021/10/mantenimiento-preventivo-00-Ejemplos-de-mantenimiento-preventivo-de-computadoras-para-hacer-en-casa.jpg',
         mainDescription: "Un equipo bien mantenido es un equipo que dura más y funciona mejor. Nuestro servicio de mantenimiento preventivo está diseñado para anticipar problemas, limpiar componentes vitales y optimizar el software para garantizar el máximo rendimiento y evitar fallas costosas en el futuro.",
         features: [
             'Limpieza física interna de polvo y componentes.',
@@ -34,9 +34,9 @@ export const services = [
             'Revisión de estado del disco duro y memoria RAM.'
         ],
         gallery: [
-            'https://placehold.co/600x400/1f2937/ffffff?text=Limpieza',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Optimización',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Revisión',
+            'https://www.ofimarket.pe/cdn/shop/articles/como-limpiar-pantalla-teclado-laptop_600x600_crop_center.jpg?v=1666732861',
+            'https://jfsoluciones.com.ar/wp-content/uploads/2024/11/limpieza-de-pc-portatil-1024x853-1.png',
+            'https://intelite.gt/wp-content/uploads/2019/02/mantenimiento-computadoras-1024x536.jpg',
         ]
     },
     { 
@@ -44,7 +44,7 @@ export const services = [
         icon: '🛡️', 
         title: 'Eliminación de Virus', 
         shortDescription: 'Protegemos tu información eliminando cualquier amenaza de seguridad.',
-        heroImage: 'https://placehold.co/1200x400/111827/4F8AFE?text=Seguridad',
+        heroImage: 'https://icorp.com.mx/wp-content/uploads/2015/05/%C2%BFCuales-son-los-3-pilares-de-la-seguridad-informatica-scaled.webp',
         mainDescription: "Las amenazas en línea son constantes. Nuestro servicio de eliminación de virus no solo limpia tu equipo de malware, spyware y ransomware, sino que también repara los daños causados al sistema y te asesoramos para que navegues de forma más segura y protejas tus datos personales.",
         features: [
             'Escaneo profundo y eliminación de todo tipo de malware.',
@@ -53,9 +53,9 @@ export const services = [
             'Recomendaciones para mejorar tus hábitos de seguridad.'
         ],
         gallery: [
-            'https://placehold.co/600x400/1f2937/ffffff?text=Escaneo',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Protección',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Antivirus',
+            'https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2024/05/hwinfo-software-diagnostico-gratis-windows-utilizan-incluso-nasa-3403837.jpg?tf=3840x',
+            'https://www.ucalp.edu.ar/wp-content/uploads/2017/07/5-7-Consejos-b%C3%A1sicos-para-proteger-tu-computadora.jpg',
+            'https://cdn.shopify.com/s/files/1/0329/9865/3996/t/5/assets/antivirus_software_list_for_pc-5v7BR8.True?v=1707759816',
         ]
     },
     { 
@@ -82,7 +82,7 @@ export const services = [
         icon: '🌐', 
         title: 'Soporte Remoto', 
         shortDescription: 'Solución de problemas de software de forma rápida y segura sin moverte.',
-        heroImage: 'https://placehold.co/1200x400/111827/4F8AFE?text=Soporte+Remoto',
+        heroImage: 'https://configsystem.pe/wp-content/uploads/2024/08/Soporte-remoto-de-alta-confiabilidad-Plataforma-resuelve-problemas-tecnicos-en-segundos-y-con-la-maxima-seguridad-que-existe-en-el-mercado-scaled-1.jpg',
         mainDescription: "Ahorra tiempo y obtén soluciones rápidas con nuestro servicio de soporte remoto. Nos conectamos a tu equipo de forma segura para resolver problemas de software, configurar programas, instalar periféricos y responder a tus dudas, todo sin que tengas que salir de tu casa u oficina.",
         features: [
             'Configuración de programas y periféricos (impresoras, etc.).',
@@ -91,9 +91,9 @@ export const services = [
             'Soporte para problemas con correo electrónico y navegadores.'
         ],
         gallery: [
-            'https://placehold.co/600x400/1f2937/ffffff?text=Conexión',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Asistencia',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Solución',
+            'https://tramite.pe/img/soporte_tecnico_remoto.png',
+            'https://cdn3.f-cdn.com//files/download/183777835/3.png?fit=crop',
+            'https://blackbytes.com/wp-content/uploads/2021/08/remote-it-support-1170x658.jpg',
         ]
     },
     { 
