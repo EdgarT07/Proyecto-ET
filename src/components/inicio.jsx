@@ -106,11 +106,11 @@ export default function Inicio({ setActiveSection }) {
 
       <ScrollAnimatedSection>
         <section id="quienes-somos" className="py-16 sm:py-20 bg-gray-800/50">
-          <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">Quienes Somos</h2>
               <p className="text-gray-300 mb-4">
-                Somos un equipo de profesionales apasionados por la tecnología, dedicados a ofrecer soluciones eficientes y confiables. Queremos ganarnos tu confianza, brindándote un servicio de calidad y atención personalizada ofreciéndote soluciones tecnológicas de integridad.
+                Somos un equipo apasionados por la tecnología aspirantes a ser tu consultor tecnologico de confianza. Dedicados a ofrecer soluciones eficientes y confiables. Queremos ganarnos tu confianza, brindándote un servicio de calidad y atención personalizada ofreciéndote soluciones tecnológicas de integridad.
               </p>
               <p className="text-gray-300 mb-4">
                 Entendemos las necesidades de nuestros clientes y nos esforzamos por superar sus expectativas en cada proyecto. Creemos en un servicio honesto, transparente y personalizado, porque más que clientes, buscamos construir relaciones a largo plazo.
@@ -119,8 +119,8 @@ export default function Inicio({ setActiveSection }) {
                 Desde la reparación más compleja hasta el diseño de una página web impactante, nuestro compromiso es con la calidad y tu satisfacción.
               </p>
             </div>
-            <div className="bg-gray-700/50 rounded-lg flex items-center justify-center h-64 sm:h-80 border-2 border-dashed border-gray-500">
-              <p className="text-gray-400">Marco para imagen (ej. foto del equipo)</p>
+            <div className="rounded-lg overflow-hidden">
+              <img src="/Consultoria.jpeg" alt="Consultoría tecnológica" className="w-full h-full object-cover" />
             </div>
           </div>
         </section>
@@ -159,7 +159,7 @@ export default function Inicio({ setActiveSection }) {
               <div className="scroller__inner">
                 {marcasDuplicadas.map((marca, index) => (
                   <div key={index} className="bg-gray-700/50 p-4 rounded-lg h-24 flex items-center justify-center w-48 flex-shrink-0">
-                    <img src={marca.logo} alt={marca.nombre} className="max-h-22 w-auto" />
+                    <img src={marca.logo} alt={marca.nombre} className="max-h-16 w-auto" />
                   </div>
                 ))}
               </div>

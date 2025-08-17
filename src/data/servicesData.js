@@ -63,7 +63,7 @@ export const services = [
         icon: '💾', 
         title: 'Recuperación de Datos', 
         shortDescription: 'Intentamos rescatar tus archivos valiosos de dispositivos dañados.',
-        heroImage: 'https://placehold.co/1200x400/111827/4F8AFE?text=Recuperacion',
+        heroImage: 'https://www.cloudcenterandalucia.es/wp-content/uploads/2022/12/iStock-1409475480.jpg',
         mainDescription: "La pérdida de datos puede ser devastadora. Ya sea por un borrado accidental o una falla del disco duro, nuestro equipo utiliza técnicas avanzadas para intentar recuperar tus fotos, documentos y archivos importantes. Ofrecemos un diagnóstico inicial para evaluar las posibilidades de éxito.",
         features: [
             'Recuperación de archivos borrados accidentalmente.',
@@ -72,9 +72,9 @@ export const services = [
             'Diagnóstico previo sin costo.'
         ],
         gallery: [
-            'https://placehold.co/600x400/1f2937/ffffff?text=Disco+Duro',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Archivos',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Rescate',
+            'https://images.wondershare.com/recoverit/article/2019/11/data-recovery-1.jpg',
+            'https://www.muycomputer.com/wp-content/uploads/2016/08/data-backup.png',
+            'https://www.seguromovil.com/storage/como-recuperar-datos-de-un-pc-1649140324Ke7yT.jpg',
         ]
     },
     { 
@@ -92,7 +92,7 @@ export const services = [
         ],
         gallery: [
             'https://tramite.pe/img/soporte_tecnico_remoto.png',
-            'https://cdn3.f-cdn.com//files/download/183777835/3.png?fit=crop',
+            'https://datacentro.cl/wp-content/uploads/2024/07/img-soporte-tecnico-remoto.jpg',
             'https://blackbytes.com/wp-content/uploads/2021/08/remote-it-support-1170x658.jpg',
         ]
     },
@@ -101,7 +101,7 @@ export const services = [
         icon: '🎨', 
         title: 'Diseño Web', 
         shortDescription: 'Creamos sitios web modernos y funcionales para tu negocio.',
-        heroImage: 'https://placehold.co/1200x400/111827/4F8AFE?text=Diseno+Web', // Reemplaza con tu imagen
+        heroImage: 'https://i0.wp.com/www.elrincondelpublicista.com/wp-content/uploads/2018/03/dise%C3%B1o-pagina-web.jpg?fit=650%2C350&ssl=1', // Reemplaza con tu imagen
         mainDescription: "En el mundo digital actual, tu sitio web es tu carta de presentación más importante. Creamos páginas web visualmente atractivas, rápidas y fáciles de usar que convierten visitantes en clientes. Nos enfocamos en un diseño responsivo que se ve increíble en cualquier dispositivo, desde teléfonos móviles hasta computadoras de escritorio.",
         features: [
             'Diseño de páginas web responsivas (adaptables a móviles).',
@@ -110,9 +110,9 @@ export const services = [
             'Optimización básica de SEO para mejorar la visibilidad en Google.'
         ],
         gallery: [ // Reemplaza con tus imágenes
-            'https://placehold.co/600x400/1f2937/ffffff?text=Proyecto+Web+1',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Proyecto+Web+2',
-            'https://placehold.co/600x400/1f2937/ffffff?text=Carrusel+de+Disenos',
+            'https://riodigital.net/wp-content/uploads/2023/08/Diseno-de-Paginas-Web-Rio-Digital.jpg',
+            'https://www.webempresa.com/wp-content/uploads/2024/09/diseno-web-02.jpg',
+            'https://www.hostingplus.cl/wp-content/uploads/2025/01/diseno-web-que-es-y-para-que-sirve.jpg',
         ]
     }
 ];
