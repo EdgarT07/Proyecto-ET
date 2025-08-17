@@ -24,38 +24,44 @@ export default function App() {
   }, [activeSection]);
 
   const renderContent = () => {
-    // Primero, revisamos si se quiere ver un detalle de servicio
-    if (activeSection.startsWith('servicio-')) {
-      const serviceId = activeSection.replace('servicio-', '');
-      const service = services.find(s => s.id === serviceId);
-      // Si encontramos el servicio, lo mostramos. Si no, volvemos al inicio.
-      return service ? <ServicioDetalle key={activeSection} service={service} setActiveSection={setActiveSection} /> : <Inicio key="inicio" setActiveSection={setActiveSection} />;
-    }
-    
-    // Luego, revisamos si se quiere ver una publicación del blog
-    if (activeSection.startsWith('blog-')) {
-      const postId = activeSection.replace('blog-', '');
-      const post = blogPosts.find(p => p.id === postId);
-      // Si encontramos la publicación, la mostramos. Si no, volvemos a la lista del blog.
-      return post ? <BlogPost key={activeSection} post={post} setActiveSection={setActiveSection} /> : <Blog key="blog" setActiveSection={setActiveSection} />;
-    }
+    let view;
 
-    // Si no es una vista de detalle, mostramos la sección principal correspondiente
-    switch (activeSection) {
-      case 'inicio':
-        return <Inicio key="inicio" setActiveSection={setActiveSection} />;
-      case 'servicios':
-        return <Servicios key="servicios" setActiveSection={setActiveSection} />;
-      case 'contacto':
-        return <Contacto key="contacto" db={db} />;
-      case 'blog':
-        return <Blog key="blog" setActiveSection={setActiveSection} />;
-      case 'faq':
-        return <FAQ key="faq" />;
-      default:
-        // Si la sección no es reconocida, volvemos al inicio por seguridad.
-        return <Inicio key="inicio" setActiveSection={setActiveSection} />;
+    // Lógica para vistas de detalle
+    if (activeSection.startsWith('servicio-')) {
+      const serviceId = activeSection.substring('servicio-'.length);
+      const service = services.find(s => s.id === serviceId);
+      view = service 
+        ? <ServicioDetalle key={activeSection} service={service} setActiveSection={setActiveSection} /> 
+        : <Servicios key="servicios" setActiveSection={setActiveSection} />; // Fallback
+    } else if (activeSection.startsWith('blog-')) {
+      const postId = activeSection.substring('blog-'.length);
+      const post = blogPosts.find(p => p.id === postId);
+      view = post 
+        ? <BlogPost key={activeSection} post={post} setActiveSection={setActiveSection} /> 
+        : <Blog key="blog" setActiveSection={setActiveSection} />; // Fallback
+    } else {
+      // Lógica para secciones principales
+      switch (activeSection) {
+        case 'inicio':
+          view = <Inicio key="inicio" setActiveSection={setActiveSection} />;
+          break;
+        case 'servicios':
+          view = <Servicios key="servicios" setActiveSection={setActiveSection} />;
+          break;
+        case 'contacto':
+          view = <Contacto key="contacto" db={db} />;
+          break;
+        case 'blog':
+          view = <Blog key="blog" setActiveSection={setActiveSection} />;
+          break;
+        case 'faq':
+          view = <FAQ key="faq" />;
+          break;
+        default:
+          view = <Inicio key="inicio-default" setActiveSection={setActiveSection} />;
+      }
     }
+    return view;
   };
 
   return (
