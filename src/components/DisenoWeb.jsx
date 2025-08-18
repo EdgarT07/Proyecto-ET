@@ -79,7 +79,7 @@ export default function DisenoWeb({ setActiveSection, onSelectPaquete }) {
       id: 'profesional',
       title: "Paquete Profesional",
       price: "$250",
-      maintenance: "180",
+      maintenance: "100",
       description: "La solución completa para pymes que buscan consolidar su imagen y atraer clientes con contenido.",
       features: [
         "Todo lo del Paquete Emprendedor.",
@@ -94,8 +94,8 @@ export default function DisenoWeb({ setActiveSection, onSelectPaquete }) {
     {
       id: 'tienda-online',
       title: "Paquete Tienda Online",
-      price: "Desde $700",
-      maintenance: "420",
+      price: "Desde $500",
+      maintenance: "200",
       description: "La herramienta definitiva para negocios que desean vender productos por internet 24/7.",
       features: [
         "Todo lo del Paquete Profesional.",

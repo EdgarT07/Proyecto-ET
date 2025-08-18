@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
+import { db } from './firebaseConfig'; // Import db from firebaseConfig
 // Importación de componentes
 import Header from './components/header';
 import Inicio from './components/inicio';
@@ -59,7 +61,7 @@ function App() {
       case 'faq':
         return <FAQ />;
       case 'contacto':
-        return <Contacto />;
+        return <Contacto db={db} />;
       default:
         return <Inicio setActiveSection={setActiveSection} />;
     }

@@ -25,11 +25,10 @@ export default function PaqueteDetalle({ paquete, setActiveSection }) {
         "Certificado SSL gratuito",
         "Dominio .com (1er año incluido)",
         "Hosting premium (1er año incluido)",
-        "Tiempo de entrega: 5-7 días hábiles"
+        "Tiempo de entrega: 7-14 días hábiles"
       ],
       extras: [
         "1 mes de soporte técnico gratuito",
-        "Capacitación básica de 30 minutos",
         "Manual de usuario actualizable",
         "Backup automático semanal"
       ],
@@ -44,7 +43,7 @@ export default function PaqueteDetalle({ paquete, setActiveSection }) {
     'profesional': {
       title: "Paquete Profesional",
       price: "$250",
-      maintenance: "$180/año",
+      maintenance: "$100/año",
       description: "La solución completa para pymes que buscan consolidar su imagen digital y atraer más clientes.",
       heroImage: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       features: [
@@ -58,14 +57,13 @@ export default function PaqueteDetalle({ paquete, setActiveSection }) {
         "Chat en vivo básico",
         "Newsletter y email marketing",
         "Análisis de competencia",
-        "Tiempo de entrega: 7-10 días hábiles"
+        "Tiempo de entrega: 14-21 días hábiles"
       ],
       extras: [
         "3 meses de soporte técnico",
-        "Capacitación de 1 hora",
         "Actualizaciones de seguridad mensuales",
         "Reporte de rendimiento mensual",
-        "1 artículo de blog mensual (3 meses)"
+        
       ],
       process: [
         "Análisis detallado de negocio y competencia",
@@ -78,8 +76,8 @@ export default function PaqueteDetalle({ paquete, setActiveSection }) {
     },
     'tienda-online': {
       title: "Paquete Tienda Online",
-      price: "Desde $700",
-      maintenance: "$420/año",
+      price: "Desde $500",
+      maintenance: "$200/año",
       description: "La herramienta definitiva para negocios que quieren vender online 24/7 con todas las funcionalidades de e-commerce.",
       heroImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       features: [
@@ -93,7 +91,7 @@ export default function PaqueteDetalle({ paquete, setActiveSection }) {
         "Facturación automática",
         "Integración con WhatsApp para pedidos",
         "Análisis de ventas y reportes",
-        "Tiempo de entrega: 15-20 días hábiles"
+        "Tiempo de entrega: 1-2 meses (depende del proyecto)"
       ],
       extras: [
         "6 meses de soporte técnico prioritario",
