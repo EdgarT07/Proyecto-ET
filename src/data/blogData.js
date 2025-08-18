@@ -9,7 +9,7 @@ export const blogPosts = [
       { type: 'paragraph', text: 'Un ordenador lento puede ser una gran fuente de frustración. Antes de pensar en comprar uno nuevo, existen varios trucos sencillos que puedes aplicar para devolverle la vida a tu equipo. Aquí te presentamos cinco consejos efectivos que marcarán la diferencia.' },
       { type: 'heading', text: '1. Limpia tu Disco Duro' },
       { type: 'paragraph', text: 'Con el tiempo, tu disco duro se llena de archivos temporales, programas que no usas y descargas olvidadas. Utiliza la herramienta "Liberador de espacio en disco" de Windows o una aplicación similar para eliminar archivos innecesarios. Un disco duro con más espacio libre permite que el sistema operativo trabaje de forma más holgada.' },
-      { type: 'image', src: 'https://placehold.co/800x400/1f2937/ffffff?text=Limpieza+de+Disco', alt: 'Limpieza de disco duro' },
+      { type: 'image', src: 'https://tecnologia-informatica.com/wp-content/uploads/2017/11/como-limpiar-disco-duro-2.jpg', alt: 'Limpieza de disco duro' },
       { type: 'heading', text: '2. Desactiva Programas de Inicio' },
       { type: 'paragraph', text: 'Muchos programas se configuran para iniciarse automáticamente cuando enciendes tu PC, consumiendo memoria RAM y ralentizando el arranque. Presiona Ctrl+Shift+Esc para abrir el Administrador de Tareas, ve a la pestaña "Inicio" y deshabilita las aplicaciones que no necesites que se ejecuten constantemente.' },
       { type: 'heading', text: '3. Aumenta la Memoria RAM' },
@@ -20,9 +20,9 @@ export const blogPosts = [
       { type: 'paragraph', text: 'Las actualizaciones de Windows, macOS y de los drivers de tus componentes (como la tarjeta gráfica) a menudo incluyen optimizaciones de rendimiento y parches de seguridad. Asegúrate de tener siempre tu sistema al día.' },
     ],
     gallery: [
-      'https://placehold.co/600x400/1f2937/ffffff?text=RAM',
-      'https://placehold.co/600x400/1f2937/ffffff?text=SSD',
-      'https://placehold.co/600x400/1f2937/ffffff?text=Windows+Update',
+      'https://hiraoka.com.pe/media/mageplaza/blog/post/m/e/memoria_ram-que_es_y_para_que_sirve_1.jpg',
+      'https://sigmatiendas.com/cdn/shop/collections/1366_2000_f212684d-3e4a-43d1-89fb-5bf9f92f5725.jpg?v=1734004894&width=2048',
+      'https://es.easeus.com/images/en/data-recovery/drw-pro/windows-update-not-working-re.png',
     ]
   },
   {
@@ -34,7 +34,7 @@ export const blogPosts = [
       { type: 'paragraph', text: 'Una de las mayores ventajas de una laptop es su portabilidad, pero esta depende completamente de la salud de su batería. Con el tiempo, todas las baterías se degradan. Saber cuándo es el momento adecuado para un reemplazo puede ahorrarte muchos problemas.' },
       { type: 'heading', text: '1. El Sistema Operativo te Avisa' },
       { type: 'paragraph', text: 'Tanto Windows como macOS tienen sistemas de monitoreo de batería. Si ves una notificación con un ícono de una "X" roja sobre la batería o un mensaje que dice "Considera reemplazar la batería", es la señal más clara de que su vida útil está llegando a su fin.' },
-      { type: 'image', src: 'https://placehold.co/800x400/1f2937/ffffff?text=Aviso+de+Batería', alt: 'Notificación de batería' },
+      { type: 'image', src: 'https://learn-attachment.microsoft.com/api/attachments/d17df3f8-778f-4471-b891-9d9a9d5f6f36?platform=QnA', alt: 'Notificación de batería' },
       { type: 'heading', text: '2. Duración Drásticamente Reducida' },
       { type: 'paragraph', text: 'Si notas que tu laptop, que antes duraba varias horas desconectada, ahora apenas sobrevive 30 o 40 minutos, es un síntoma inequívoco de degradación. La capacidad máxima de la batería ha disminuido considerablemente.' },
       { type: 'heading', text: '3. Se Apaga Inesperadamente' },
@@ -43,9 +43,9 @@ export const blogPosts = [
       { type: 'paragraph', text: 'Es normal que una laptop se caliente un poco al cargar, pero si notas que la zona de la batería se calienta de forma excesiva, podría ser una señal de que las celdas internas están dañadas, lo cual puede ser peligroso.' },
     ],
     gallery: [
-      'https://placehold.co/600x400/1f2937/ffffff?text=Duración+de+Batería',
-      'https://placehold.co/600x400/1f2937/ffffff?text=Laptop+Caliente',
-      'https://placehold.co/600x400/1f2937/ffffff?text=Reemplazo',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Yd0p-sUCSOfcY4FeeiVW1LpAGpOZeZJK9Q&s',
+      'https://www.informaticogranada.com/wp-content/uploads/2022/01/Ordenador-caliente-temperatura.jpg',
+      'https://pe-media.hptiendaenlinea.com/magefan_blog/Reemplazo_de_bater_a_en_laptop.png',
     ]
   },
   {
@@ -57,16 +57,16 @@ export const blogPosts = [
         { type: 'paragraph', text: 'En la era digital, tu presencia en línea es fundamental. Un sitio web no es solo una tarjeta de presentación digital; es una herramienta poderosa para atraer clientes, generar confianza y hacer crecer tu negocio. Aquí te explicamos por qué invertir en un buen diseño web es crucial.' },
         { type: 'heading', text: '1. Causa una Primera Impresión Duradera' },
         { type: 'paragraph', text: 'Los visitantes tardan solo unos segundos en formarse una opinión sobre tu negocio basándose en el diseño de tu página. Un diseño limpio, moderno y profesional comunica credibilidad y confianza desde el primer momento.' },
-        { type: 'image', src: 'https://placehold.co/800x400/1f2937/ffffff?text=Primera+Impresión', alt: 'Diseño web profesional' },
+        { type: 'image', src: 'https://arrobasystem.com/cdn/shop/articles/diseno-web-todo-lo-que-debes-saber_960x502_crop_center.jpg?v=1598655949960w', alt: 'Diseño web profesional' },
         { type: 'heading', text: '2. Mejora la Experiencia del Usuario (UX)' },
         { type: 'paragraph', text: 'Un buen diseño no solo es estético, sino también funcional. Una navegación intuitiva, tiempos de carga rápidos y un diseño adaptable a dispositivos móviles (responsive) garantizan que tus visitantes encuentren lo que buscan fácilmente, mejorando su satisfacción y aumentando las posibilidades de conversión.' },
         { type: 'heading', text: '3. Potencia tu Posicionamiento en Google (SEO)' },
         { type: 'paragraph', text: 'Los motores de búsqueda como Google favorecen a los sitios web que ofrecen una buena experiencia de usuario. Un código limpio, una estructura clara y un diseño responsive son factores clave que ayudan a que tu página aparezca en los primeros resultados de búsqueda.' },
     ],
     gallery: [
-      'https://placehold.co/600x400/1f2937/ffffff?text=Responsive+Design',
-      'https://placehold.co/600x400/1f2937/ffffff?text=SEO',
-      'https://placehold.co/600x400/1f2937/ffffff?text=UX/UI',
+      'https://aukera.es/blog/imagenes/imagen11.png',
+      'https://www.webnode.com/es/blog/files/2020/10/SEO.jpg',
+      'https://nireweb.es/wp-content/uploads/2023/11/Diseno-web-UI-UX-1024x732.webp',
     ]
   },
     {
@@ -80,14 +80,14 @@ export const blogPosts = [
       { type: 'paragraph', text: 'No confíes ciegamente en el nombre que aparece. Fíjate bien en la dirección de correo electrónico completa. Los estafadores a menudo usan dominios que se parecen a los oficiales pero con ligeras variaciones, como "banco@notificaciones-banco.com" en lugar de "notificaciones@banco.com".' },
       { type: 'heading', text: '2. Busca un Tono Alarmista o Urgente' },
       { type: 'paragraph', text: 'Los correos de phishing a menudo intentan asustarte. Frases como "Tu cuenta será suspendida", "Actividad sospechosa detectada" o "Tienes 24 horas para actuar" buscan que actúes por impulso sin pensar.' },
-      { type: 'image', src: 'https://placehold.co/800x400/1f2937/ffffff?text=Correo+Falso', alt: 'Ejemplo de correo de phishing' },
+      { type: 'image', src: 'https://web-assets.esetstatic.com/wls/2017/04/correo-falso-visa.png', alt: 'Ejemplo de correo de phishing' },
       { type: 'heading', text: '3. Desconfía de Enlaces y Archivos Adjuntos' },
       { type: 'paragraph', text: 'Nunca hagas clic en enlaces ni descargues archivos de correos sospechosos. Puedes pasar el cursor del ratón sobre un enlace (sin hacer clic) para ver la dirección real a la que te dirige en la esquina inferior de tu navegador. Si no coincide o parece extraña, no hagas clic.' },
     ],
     gallery: [
-      'https://placehold.co/600x400/1f2937/ffffff?text=Remitente+Falso',
-      'https://placehold.co/600x400/1f2937/ffffff?text=Enlace+Sospechoso',
-      'https://placehold.co/600x400/1f2937/ffffff?text=Candado+de+Seguridad',
+      'https://www.globalsign.com/application/files/9916/8183/6972/Phishing_email_1-min.png',
+      'https://cibersafety.com/wp-content/uploads/2024/10/shutterstock_2253949833-1-1.jpg',
+      'https://dinahosting.com/blog/upload/2020/08/https-y-navegador-no-seguro.jpg',
     ]
   },
   {
@@ -101,14 +101,14 @@ export const blogPosts = [
       { type: 'paragraph', text: 'Los discos duros y SSD tienen una vida útil limitada. Si tu unidad de almacenamiento principal falla, una copia de seguridad es la única forma de garantizar que no perderás toda tu información.' },
       { type: 'heading', text: '2. Defensa contra Ransomware y Virus' },
       { type: 'paragraph', text: 'El ransomware es un tipo de malware que secuestra tus archivos y exige un pago para liberarlos. Con una copia de seguridad reciente y desconectada de tu equipo, puedes simplemente restaurar tus archivos sin tener que pagar a los ciberdelincuentes.' },
-      { type: 'image', src: 'https://placehold.co/800x400/1f2937/ffffff?text=Nube+vs+Disco+Externo', alt: 'Copia de seguridad en la nube y en disco' },
+      { type: 'image', src: 'https://img.asmedia.epimg.net/resizer/v2/PTAKBZICNBIFFO6OJFVX7JE4BQ.jpg?auth=f0658c922adb140576dd6ea1981850367ac1c81279e23763abef4679a54bbfb4&width=1472&height=828&smart=true', alt: 'Copia de seguridad en la nube y en disco' },
       { type: 'heading', text: '3. La Regla 3-2-1' },
       { type: 'paragraph', text: 'La estrategia de copia de seguridad más recomendada es la regla 3-2-1: Ten al menos TRES copias de tus datos, en DOS tipos de almacenamiento diferentes, y al menos UNA de esas copias debe estar en una ubicación física distinta (por ejemplo, en la nube).' },
     ],
     gallery: [
-      'https://placehold.co/600x400/1f2937/ffffff?text=Disco+Externo',
-      'https://placehold.co/600x400/1f2937/ffffff?text=Almacenamiento+en+la+Nube',
-      'https://placehold.co/600x400/1f2937/ffffff?text=Restauración',
+      'https://www.pcfusion.com.mx/wp-content/uploads/2022/03/la-nube-o-un-disco-duro-pc-fusion.jpg',
+      'https://www.redeszone.net/app/uploads-redeszone.net/2022/10/contratar-nube-disco-duro.jpg?x=500&y=295&quality=80',
+      'https://www.maprofar.com/wp-content/uploads/2023/08/recuperacion-datos-1024x640.jpg',
     ]
   }
 ];

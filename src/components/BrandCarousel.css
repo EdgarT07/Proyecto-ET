@@ -1,0 +1,107 @@
+/* Brand Carousel Styles */
+.scroller {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroller__inner {
+  display: flex;
+  gap: 1rem;
+  padding-block: 1rem;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  animation-play-state: running;
+}
+
+.scroller[data-speed="slow"] .scroller__inner {
+  animation-duration: 60s;
+}
+
+.scroller[data-speed="fast"] .scroller__inner {
+  animation-duration: 20s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.scroller__inner li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(55, 65, 81, 0.5);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  min-width: 192px;
+  height: 96px;
+  transition: all 0.3s ease;
+}
+
+.scroller__inner li:hover {
+  background: rgba(75, 85, 99, 0.7);
+  transform: scale(1.05);
+}
+
+.scroller__inner li img {
+  max-height: 64px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroller__inner {
+    gap: 0.5rem;
+  }
+  
+  .scroller__inner li {
+    min-width: 120px;
+    height: 80px;
+    padding: 0.75rem;
+  }
+  
+  .scroller__inner li img {
+    max-height: 48px;
+  }
+}
+
+/* Pause animation on hover */
+.scroller:hover .scroller__inner {
+  animation-play-state: paused;
+}
+
+/* Fade edges effect */
+.scroller::before,
+.scroller::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scroller::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0));
+}
+
+.scroller::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0));
+}
+
+@media (max-width: 768px) {
+  .scroller::before,
+  .scroller::after {
+    width: 50px;
+  }
+}

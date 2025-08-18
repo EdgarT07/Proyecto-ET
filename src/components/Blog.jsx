@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-export default function Blog({ setActiveSection }) {
+export default function Blog({ setActiveSection, onSelectPost }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,13 @@ export default function Blog({ setActiveSection }) {
               <div className="p-6 flex flex-col flex-grow">
                 <p className="text-gray-400 mb-4 flex-grow">{post.excerpt}</p>
                 <button 
-                  onClick={() => setActiveSection(`blog-${post.id}`)}
+                  onClick={() => {
+                    const selectedPost = blogPosts.find(p => p.id === post.id);
+                    if (selectedPost && onSelectPost) {
+                      onSelectPost(selectedPost);
+                      window.scrollTo(0, 0);
+                    }
+                  }}
                   className="text-blue-400 hover:text-blue-300 font-semibold self-start mt-auto"
                 >
                   Leer más →

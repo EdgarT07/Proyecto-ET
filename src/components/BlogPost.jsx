@@ -1,85 +1,85 @@
-// src/components/Blog.jsx
+// src/components/BlogPost.jsx
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { blogPosts } from '../data/blogData';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import ScrollAnimatedSection from './ScrollAnimatedSection';
 
-export default function Blog({ setActiveSection }) {
+// Este componente renderizará cada parte del contenido del post
+const PostContent = ({ item }) => {
+  switch (item.type) {
+    case 'heading':
+      return <h2 className="text-2xl sm:text-3xl font-bold mt-8 mb-4 text-blue-400">{item.text}</h2>;
+    case 'paragraph':
+      return <p className="text-gray-300 leading-relaxed mb-4">{item.text}</p>;
+    case 'image':
+      return <img src={item.src} alt={item.alt} className="my-8 rounded-lg w-full h-auto object-cover" />;
+    default:
+      return null;
+  }
+};
+
+export default function BlogPost({ post, setActiveSection }) {
+  if (!post) {
+    // Si por alguna razón no se encuentra el post, volvemos al blog.
+    setActiveSection('blog');
+    return null;
+  }
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="container mx-auto px-6 py-24 sm:py-32"
     >
       <Helmet>
-        <title>Blog de Tecnología - Tech Solution</title>
-        <meta name="description" content="Consejos, noticias y trucos del mundo de la tecnología. Aprende a optimizar tu PC, protegerte de virus y mucho más." />
+        <title>{`${post.title} - Tech Solution Blog`}</title>
+        <meta name="description" content={post.excerpt} />
       </Helmet>
-      <div className="text-center mb-12">
-        <h1 className="text-4xl sm:text-5xl font-extrabold">Nuestro Blog</h1>
-        <p className="text-gray-400 mt-4">Consejos, noticias y trucos del mundo de la tecnología.</p>
-      </div>
       
-      <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={30}
-        slidesPerView={1}
-        loop={true}
-        navigation
-        pagination={{ clickable: true }}
-        breakpoints={{
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-        }}
-        className="mySwiper py-4"
+      {/* Hero Section del Post */}
+      <section 
+        className="h-80 bg-cover bg-center flex items-center justify-center text-white px-4"
+        style={{ backgroundImage: `linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url(${post.heroImage})` }}
       >
-        {blogPosts.map((post) => (
-          <SwiperSlide key={post.id} className="pb-12">
-            <div className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 h-full flex flex-col transition-all duration-300 ease-in-out transform hover:scale-105 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/30">
-              <div className="relative h-48">
-                <img src={post.heroImage} alt={post.title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                <h2 className="absolute bottom-0 left-0 p-4 text-xl font-bold text-white">{post.title}</h2>
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <p className="text-gray-400 mb-4 flex-grow">{post.excerpt}</p>
-                <button 
-                  onClick={() => setActiveSection(`blog-${post.id}`)}
-                  className="text-blue-400 hover:text-blue-300 font-semibold self-start mt-auto"
-                >
-                  Leer más →
-                </button>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      
-      <style jsx global>{`
-        .swiper {
-          overflow: visible !important;
-        }
-        .swiper-button-next, .swiper-button-prev {
-          color: #3B82F6 !important;
-        }
-        .swiper-pagination-bullet-active {
-          background: #3B82F6 !important;
-        }
-      `}</style>
+        <div className="text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">{post.title}</h1>
+            <button 
+                onClick={() => setActiveSection('blog')}
+                className="mt-6 text-sm bg-white/20 hover:bg-white/30 text-white font-bold py-2 px-4 rounded-full transition-colors"
+            >
+                ← Volver al Blog
+            </button>
+        </div>
+      </section>
+
+      {/* Contenido del Post */}
+      <div className="container mx-auto px-6 py-12 sm:py-16">
+        <ScrollAnimatedSection>
+          <article className="max-w-3xl mx-auto">
+            {post.content.map((item, index) => (
+              <PostContent key={index} item={item} />
+            ))}
+          </article>
+        </ScrollAnimatedSection>
+        
+        {/* Galería de Imágenes del Post */}
+        {post.gallery && post.gallery.length > 0 && (
+          <ScrollAnimatedSection>
+            <section className="mt-12 sm:mt-16">
+                <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-blue-400">Galería</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                    {post.gallery.map((image, index) => (
+                        <div key={index} className="bg-gray-700/50 rounded-lg flex items-center justify-center h-64">
+                            <img src={image} alt={`Galería ${index + 1}`} className="w-full h-full object-cover rounded-lg"/>
+                        </div>
+                    ))}
+                </div>
+            </section>
+          </ScrollAnimatedSection>
+        )}
+      </div>
     </motion.div>
   );
 }

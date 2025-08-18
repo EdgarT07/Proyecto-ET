@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { services } from '../data/servicesData';
 
-export default function Servicios({ setActiveSection }) {
+export default function Servicios({ onSelectService }) {
   return (
     <motion.section
       id="servicios"
@@ -34,7 +34,7 @@ export default function Servicios({ setActiveSection }) {
               <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
               <p className="text-gray-400 flex-grow">{service.shortDescription}</p>
               <button 
-                onClick={() => setActiveSection(`servicio-${service.id}`)}
+                onClick={() => onSelectService(service)}
                 className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition-colors w-full"
               >
                 Ver Detalles
