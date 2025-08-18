@@ -8,13 +8,13 @@ const CheckIcon = () => (
   <svg className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
 );
 
-const PackageCard = ({ title, price, maintenance, description, features, recommended, ctaText, ctaAction }) => {
+const PackageCard = ({ title, price, maintenance, description, features, recommended, ctaText, ctaAction, verDetallesAction }) => {
   const cardClass = recommended 
     ? "bg-gray-800 border-2 border-blue-500 rounded-xl shadow-2xl shadow-blue-500/20 transform lg:scale-105" 
     : "bg-gray-800/50 border border-gray-700 rounded-xl shadow-lg";
 
   return (
-    <div className={`${cardClass} p-8 flex flex-col h-full`}>
+    <div className={`${cardClass} p-8 flex flex-col h-full relative`}>
       {recommended && (
         <div className="absolute top-0 right-0 -mt-4 mr-4">
           <span className="bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Recomendado</span>
@@ -27,28 +27,40 @@ const PackageCard = ({ title, price, maintenance, description, features, recomme
         <span className="text-gray-400 text-lg"> USD</span>
       </div>
       <ul className="space-y-4 mb-8 text-gray-300">
-        {features.map((feature, index) => (
+        {features.slice(0, 3).map((feature, index) => (
           <li key={index} className="flex items-start">
             <CheckIcon />
             <span>{feature}</span>
           </li>
         ))}
+        {features.length > 3 && (
+          <li className="text-blue-400 text-sm">+{features.length - 3} características más...</li>
+        )}
       </ul>
-      <button 
-        onClick={ctaAction}
-        className="mt-auto w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105"
-      >
-        {ctaText}
-      </button>
-       <p className="text-center text-gray-500 text-sm mt-4">Mantenimiento Anual: ${maintenance} USD</p>
+      <div className="mt-auto space-y-3">
+        <button 
+          onClick={verDetallesAction}
+          className="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105"
+        >
+          Ver Detalles
+        </button>
+        <button 
+          onClick={ctaAction}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105"
+        >
+          {ctaText}
+        </button>
+      </div>
+      <p className="text-center text-gray-500 text-sm mt-4">Mantenimiento Anual: ${maintenance} USD</p>
     </div>
   );
 };
 
 
-export default function DisenoWeb({ setActiveSection }) {
+export default function DisenoWeb({ setActiveSection, onSelectPaquete }) {
   const packages = [
     {
+      id: 'emprendedor',
       title: "Paquete Emprendedor",
       price: "$150",
       maintenance: "100",
@@ -64,6 +76,7 @@ export default function DisenoWeb({ setActiveSection }) {
       ctaText: "¡Lo Quiero!",
     },
     {
+      id: 'profesional',
       title: "Paquete Profesional",
       price: "$250",
       maintenance: "180",
@@ -79,6 +92,7 @@ export default function DisenoWeb({ setActiveSection }) {
       ctaText: "¡Excelente Elección!",
     },
     {
+      id: 'tienda-online',
       title: "Paquete Tienda Online",
       price: "Desde $700",
       maintenance: "420",
@@ -113,10 +127,21 @@ export default function DisenoWeb({ setActiveSection }) {
 
       {/* Hero Section */}
       <section 
-        className="bg-gray-900 bg-cover bg-center py-20 sm:py-32 text-white text-center"
-        style={{backgroundImage: `linear-gradient(rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.9)), url('https://images.unsplash.com/photo-1559028006-44d08a09b4b0?q=80&w=2874&auto=format&fit=crop')`}}
+        className="bg-gray-900 bg-cover bg-center py-20 sm:py-32 text-white text-center relative overflow-hidden"
       >
-        <div className="container mx-auto px-6">
+        {/* Background Image - Clear and Sharp */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url('https://argrupo.es/wp-content/uploads/2021/06/la-importancia-del-diseno-web-para-la-empresa.jpg')`
+          }}
+        />
+        <div className="absolute inset-0 bg-gray-900/80" />
+        
+        {/* Alternative: You can replace the URL above with your own image */}
+        {/* Example: backgroundImage: `url('/your-image.jpg')` */}
+        
+        <div className="relative z-10 container mx-auto px-6">
           <motion.h1 
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight"
             initial={{ y: 20, opacity: 0 }}
@@ -146,6 +171,7 @@ export default function DisenoWeb({ setActiveSection }) {
                   key={index} 
                   {...pkg}
                   ctaAction={handleCTA}
+                  verDetallesAction={() => onSelectPaquete(pkg.id)}
                 />
               ))}
             </div>

@@ -12,9 +12,10 @@ import BlogPost from './components/BlogPost';
 import FAQ from './components/FAQ';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
-import DisenoWeb from './components/DisenoWeb'; // <-- NUEVO COMPONENTE
+import DisenoWeb from './components/DisenoWeb';
+import PaqueteDetalle from './components/PaqueteDetalle';
 
-// Importación de datos (CORREGIDO)
+// Importación de datos
 import { services } from './data/servicesData';
 import { blogPosts } from './data/blogData';
 
@@ -22,6 +23,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('inicio');
   const [selectedService, setSelectedService] = useState(null);
   const [selectedPost, setSelectedPost] = useState(null);
+  const [selectedPaquete, setSelectedPaquete] = useState(null);
 
   const handleSelectService = (service) => {
     setSelectedService(service);
@@ -33,6 +35,11 @@ function App() {
     setActiveSection('blog-post');
   };
 
+  const handleSelectPaquete = (paquete) => {
+    setSelectedPaquete(paquete);
+    setActiveSection('paquete-detalle');
+  };
+
   const renderSection = () => {
     switch (activeSection) {
       case 'inicio':
@@ -41,8 +48,10 @@ function App() {
         return <Servicios services={services} onSelectService={handleSelectService} />;
       case 'servicio-detalle':
         return <ServicioDetalle service={selectedService} setActiveSection={setActiveSection} />;
-      case 'diseno-web': // <-- NUEVO CASO
-        return <DisenoWeb setActiveSection={setActiveSection} />;
+      case 'diseno-web':
+        return <DisenoWeb setActiveSection={setActiveSection} onSelectPaquete={handleSelectPaquete} />;
+      case 'paquete-detalle':
+        return <PaqueteDetalle paquete={selectedPaquete} setActiveSection={setActiveSection} />;
       case 'blog':
         return <Blog setActiveSection={setActiveSection} onSelectPost={handleSelectPost} />;
       case 'blog-post':
