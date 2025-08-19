@@ -194,13 +194,13 @@ export default function Contacto({ db }) {
                   onChange={handleChange} 
                   className="w-full bg-gray-700 border border-gray-600 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                 >
-                  <option value="">Selecciona un servicio</option>
-                  {services.map(service => (
-                    <option key={service.id} value={service.title}>
-                      {service.icon} {service.title}
-                    </option>
-                  ))}
-                  <option value="otro">Otro (especificar en el mensaje)</option>
+                <option value="">Selecciona un servicio</option>
+                {services.filter(service => service.id !== 'mas-servicios').map(service => (
+                  <option key={service.id} value={service.title}>
+                    {service.icon} {service.title}
+                  </option>
+                ))}
+                <option value="otro">Otro (especificar en el mensaje)</option>
                 </select>
               </div>
 

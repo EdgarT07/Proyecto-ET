@@ -31,7 +31,7 @@ export default function Blog({ setActiveSection, onSelectPost }) {
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={30}
-        slidesPerView={1}
+        slidesPerView={1.1} // Adjusted to fit better within the container
         loop={true}
         navigation
         pagination={{ clickable: true }}

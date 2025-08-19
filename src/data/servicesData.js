@@ -114,5 +114,62 @@ export const services = [
             'https://www.webempresa.com/wp-content/uploads/2024/09/diseno-web-02.jpg',
             'https://www.hostingplus.cl/wp-content/uploads/2025/01/diseno-web-que-es-y-para-que-sirve.jpg',
         ]
+    },
+    { 
+        id: 'clonacion-disco-ssd',
+        icon: '🔁', 
+        title: 'Clonación de Discos a SSD', 
+        shortDescription: 'Migra tu disco duro tradicional a SSD para mejorar drásticamente el rendimiento de tu computadora.',
+        heroImage: 'https://www.ubackup.com/screenshot/en/others/3/disk-clone-or-system-clone.png',
+        mainDescription: "¿Tu computadora tarda mucho en encender o abrir programas? La clonación de tu disco duro tradicional a un SSD (Unidad de Estado Sólido) es la solución más efectiva para mejorar el rendimiento. Mantenemos todos tus archivos, programas y configuraciones exactamente como están, pero con una velocidad hasta 10 veces mayor. El proceso es seguro y no perderás ningún dato.",
+        features: [
+            'Clonación completa sin pérdida de datos ni programas.',
+            'Mejora drástica en velocidad de arranque y carga de aplicaciones.',
+            'Asesoramiento para elegir el SSD ideal según tus necesidades.',
+            'Configuración y optimización post-instalación del nuevo SSD.'
+        ],
+        gallery: [
+            'https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2019/05/como-clonar-disco-duro_1.jpg?tf=3840x',
+            'https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2020/01/disco-duro-hdd-1844793.jpg?tf=3840x',
+            'https://elchapuzasinformatico.com/wp-content/uploads/2025/04/EaseUS-Disk-Copy-Clonacion-HDD-a-SSD.jpg',
+        ]
+    },
+    { 
+        id: 'optimizacion-repotenciacion',
+        icon: '⚡', 
+        title: 'Optimización y Repotenciación', 
+        shortDescription: 'Potencia tu PC o laptop con mejoras de hardware: RAM, SSD, tarjetas gráficas y más componentes.',
+        heroImage: 'https://computerhoy.20minutos.es/sites/navi.axelspringer.es/public/media/image/2024/04/4-formas-optimizar-memoria-ram-pc-mejorar-rendimiento-maximo-3298132.jpg',
+        mainDescription: "¿Tu equipo ya no da el rendimiento que necesitas? No necesitas comprar uno nuevo. Nuestro servicio de optimización y repotenciación te permite actualizar componentes clave como memoria RAM, disco SSD, tarjeta gráfica y otros elementos para transformar tu PC o laptop en una máquina mucho más potente y eficiente, adaptada a tus necesidades específicas.",
+        features: [
+            'Instalación y ampliación de memoria RAM para mejor multitarea.',
+            'Actualización a discos SSD de alta velocidad para mayor rendimiento.',
+            'Instalación de tarjetas gráficas dedicadas para gaming y diseño.',
+            'Reemplazo de fuente de poder y mejora de sistema de refrigeración.'
+        ],
+        gallery: [
+            'https://imagenes.eltiempo.com/files/image_1200_600/uploads/2021/07/15/60f0664b1b36e.jpeg',
+            'https://e.rpp-noticias.io/xlarge/2018/11/19/581658_713221.jpg',
+            'https://dylcomsoporte.com/wp-content/uploads/2019/06/cambio_pasta_termica.jpg',
+        ]
+    },
+    { 
+        id: 'mas-servicios',
+        icon: '🔮', 
+        title: 'Más Servicios en Camino', 
+        shortDescription: 'Estamos constantemente innovando y ampliando nuestra oferta de servicios tecnológicos.',
+        heroImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1684&q=80',
+        mainDescription: "En Tech Solution, creemos en la mejora continua. Estamos trabajando en nuevos servicios tecnológicos para ofrecerte soluciones aún más completas. Pronto estaremos ampliando nuestro portafolio con servicios innovadores que se adaptarán a las necesidades cambiantes del mundo digital.",
+        features: [
+            'Próximamente: Servicios de inteligencia artificial y automatización',
+            'Consultoría en transformación digital para empresas',
+            'Soluciones en ciberseguridad',
+            'Creación de APIS para tu negocio o empresa'
+        ],
+        gallery: [
+            'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+            'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+        ]
     }
 ];
